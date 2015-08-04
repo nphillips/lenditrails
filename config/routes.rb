@@ -39,6 +39,7 @@ LenditRails::Application.routes.draw do
 
   # LendIt Europe 2015
   get '/europe' => 'conferences#eu15'
+  get '/europe/2015' => 'conferences#go_to_europe'
   get '/europe/2015/speakers/sign-up' => 'speakers#eu15_sign-up'
   get '/europe-book-hotel', to: redirect('http://www.hilton.com/en/hi/groups/personalized/L/LONMETW-GLEND-20151018/index.jhtml?WT.mc_id=POG', status: 301)
   get '/europe/2015/speakers' => 'speakers#eu15'
@@ -48,6 +49,7 @@ LenditRails::Application.routes.draw do
 
   # LendIt China 2015
   get '/china' => 'conferences#china15'
+  get '/china/2015' => 'conferences#go_to_china'
   get '/china/2015/speakers/sign-up' => 'speakers#china15_sign-up'
   get '/china/2015/itinerary' => 'agendas#china15'
   get '/china/2015/china-app-show' => 'conferences#china15_china_app'
@@ -61,10 +63,10 @@ LenditRails::Application.routes.draw do
 
   # LendIt USA 2015
   get '/usa' => 'conferences#usa15'
-  get '/usa/2015' => 'conferences#go_to_usa15'
+  get '/usa/2015' => 'conferences#go_to_usa'
   get '/usa/2015/videos' => 'videos#usa15'
   get '/usa/2015/videos/:id' => 'videos#show_usa15', via: :get, as: :usa15_video
-  get '/nyc' => 'conferences#go_to_usa15'
+  get '/nyc' => 'conferences#go_to_usa'
   get '/usa/2015/start-up-zone' => 'conferences#usa15_startup'
   get '/usa/2015/sponsors' => 'sponsors#usa15'
   get '/usa/2015/speakers' => 'speakers#usa15'

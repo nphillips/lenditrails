@@ -6,6 +6,10 @@ class ConferencesController < ApplicationController
     @eu15_speakers = @eu15_speakers.where(featured: true)
   end
 
+  def go_to_europe
+    redirect_to '/europe', :status => 301
+  end
+
   def sharecast
     redirect_to ('/?utm_source=sharecast&utm_medium=video&utm_campaign=europe-2014'), :status => 301
   end
@@ -15,7 +19,7 @@ class ConferencesController < ApplicationController
     @sponsors = Sponsor.where(conference: 'LendIt China 2015')
   end
 
-  def go_to_china15
+  def go_to_china
     redirect_to '/china', :status => 301
   end
 
@@ -29,7 +33,7 @@ class ConferencesController < ApplicationController
     @featured = @usa15_speakers.where(featured: true)
   end
 
-  def go_to_usa15
+  def go_to_usa
     redirect_to ('/usa'), :status => 301
   end
 
