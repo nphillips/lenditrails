@@ -36,6 +36,7 @@ LenditRails::Application.routes.draw do
 
   get '/jobs' => 'jobs#index'
   get '/jobs/salesforce-developer' => 'jobs#salesforce_developer'
+  get '/jobs/vp-finance', to: redirect('/jobs', status: 301)
   get '/jobs/speaker-manager' => 'jobs#content_manager'
   get '/jobs/content-manager', to: redirect('/jobs/speaker-manager', status: 301)
 
