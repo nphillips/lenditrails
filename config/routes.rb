@@ -5,7 +5,7 @@ LenditRails::Application.routes.draw do
   # root 'conferences#china15'
 
   get '/home' => 'home#landing'
-  # get '/test' => 'agendas#eu15'
+  get '/test' => 'agendas#eu15'
 
   # get '/conferences' => 'welcome#home'
   get '/about' => 'welcome#about'
@@ -32,7 +32,10 @@ LenditRails::Application.routes.draw do
   get '/agenda' => 'agendas#usa15'
   get '/team' => 'welcome#team'
   get '/networking' => 'welcome#networking'
+
+
   get '/jobs' => 'jobs#index'
+  get '/jobs/salesforce-developer' => 'jobs#salesforce_developer'
   get '/jobs/vp-finance' => 'jobs#vp_finance'
   get '/jobs/speaker-manager' => 'jobs#content_manager'
   get '/jobs/content-manager', to: redirect('/jobs/speaker-manager', status: 301)
