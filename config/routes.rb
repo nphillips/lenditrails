@@ -28,16 +28,18 @@ LenditRails::Application.routes.draw do
   get '/audio' => 'welcome#go_to_libsyn'
   get '/bookhotel', to: redirect('https://aws.passkey.com/g/35613120', status: 301)
   get '/podcasts' => 'podcasts#go_to_usa15'
-  get '/agenda' => 'agendas#usa15'
   get '/team' => 'welcome#team'
   get '/networking' => 'welcome#networking'
-
 
   get '/jobs' => 'jobs#index'
   get '/jobs/salesforce-developer' => 'jobs#salesforce_developer'
   get '/jobs/vp-finance', to: redirect('/jobs', status: 301)
   get '/jobs/speaker-manager' => 'jobs#speaker_manager'
   get '/jobs/content-manager', to: redirect('/jobs/speaker-manager', status: 301)
+
+
+  get '/agenda' => 'agendas#eu15'
+
 
   # LendIt Europe 2015
   get '/europe' => 'conferences#eu15'
@@ -48,7 +50,7 @@ LenditRails::Application.routes.draw do
   get '/europe/2015/sponsors' => 'sponsors#eu15'
   get '/europe/2015/video-promo' => 'videos#eu15_promo'
   get '/europe/2015/speakers/info' => 'speakers#eu15_speakers_info'
-  get '/europe/2015/agenda' => 'agendas#eu15'
+  get '/europe/2015/agenda' => 'agendas#go_to_agenda'
 
   # LendIt China 2015
   get '/china' => 'conferences#china15'
