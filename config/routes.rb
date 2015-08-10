@@ -37,6 +37,8 @@ LenditRails::Application.routes.draw do
   get '/jobs/speaker-manager' => 'jobs#speaker_manager'
   get '/jobs/content-manager', to: redirect('/jobs/speaker-manager', status: 301)
 
+  get '/europe2015-prospectus', to: redirect('https://s3-us-west-2.amazonaws.com/lendit/europe-2015/prospectus.pdf', status: 301)
+  get '/europe2015-brochure', to: redirect('https://s3-us-west-2.amazonaws.com/lendit/europe-2015/conference-brochure.pdf', status: 301)
 
   get '/agenda' => 'agendas#eu15'
 
