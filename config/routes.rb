@@ -21,7 +21,7 @@ LenditRails::Application.routes.draw do
   # get '/live' => 'videos#live'
   get '/china-pavilion-live' => 'videos#china_live'
   get '/live', to: redirect('/videos', status: 301)
-  get '/attendees' => 'attendees#go_to_usa15'
+  get '/attendees' => 'attendees#go_to_eu15'
   get '/volunteers' => 'welcome#volunteers'
   get '/volunteers/submitted' => 'welcome#volunteers_submitted'
   get '/archives' => 'conferences#index'
@@ -54,6 +54,7 @@ LenditRails::Application.routes.draw do
   get '/europe/2015/speakers/info' => 'speakers#eu15_speakers_info'
   get '/europe/2015/sponsors/guide' => 'sponsors#eu15_sponsors_guide'
   get '/europe/2015/agenda' => 'agendas#go_to_agenda'
+  get '/europe/2015/attendees' => 'attendees#eu15'
 
   # LendIt China 2015
   get '/china' => 'conferences#china15'
