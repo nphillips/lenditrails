@@ -4,7 +4,7 @@ LenditRails::Application.routes.draw do
   root 'welcome#home'
   # root 'conferences#china15'
 
-  # get '/home' => 'home#landing'
+  get '/home' => 'home#landing'
 
   # get '/conferences' => 'welcome#home'
   get '/about' => 'welcome#about'
@@ -52,6 +52,7 @@ LenditRails::Application.routes.draw do
   get '/europe/2015/sponsors' => 'sponsors#eu15'
   get '/europe/2015/video-promo' => 'videos#eu15_promo'
   get '/europe/2015/speakers/info' => 'speakers#eu15_speakers_info'
+  get '/europe/2015/sponsors/guide' => 'sponsors#eu15_sponsors_guide'
   get '/europe/2015/agenda' => 'agendas#go_to_agenda'
 
   # LendIt China 2015
