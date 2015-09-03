@@ -2,9 +2,9 @@
     <div class="columns">
       <div class="section-hd">
         <a href="/europe/2015/speakers">
-        Speakers
-        <i class="fa fa-arrow-circle-right"></i></a>
-      </div>
+          Speakers
+          <i class="fa fa-arrow-circle-right"></i></a>
+        </div>
 
         <ul class="small-block-grid-2 medium-block-grid-4 large-block-grid-4" style="margin-top:1em;">
           <% @eu15_speakers.each do |speaker| %>
@@ -30,6 +30,9 @@
                   <div class="speaker-name"><%= raw speaker.first_name %> <%= raw speaker.middle_name %> <%= raw speaker.last_name %><%= raw speaker.suffix %></div>
                   <div class="speaker-title"><%= raw speaker.title %></div>
                   <div class="speaker-company"><%= raw speaker.company_name %></div>
+                  <% if speaker.twitter? %>
+                  <div class="twitter">@<%= raw speaker.twitter %></div>
+                  <% end %>
                 </div>
                 <div class="speaker-bio-text"><div class="speaker-bio-text-inner"><%= raw speaker.bio %></div></div>
                 <div class="speaker-bio-mask"></div>
@@ -45,6 +48,9 @@
                     <div class="speaker-name"><%= raw speaker.first_name %> <%= raw speaker.last_name %><%= raw speaker.suffix %></div>
                     <div class="speaker-title"><%= raw speaker.title %></div>
                     <div class="speaker-company"><%= raw speaker.company_name %></div>
+                    <% if speaker.twitter? %>
+                    <div class="twitter">@<%= raw speaker.twitter %></div>
+                    <% end %>
                   </div>
                 </div>
               </div>

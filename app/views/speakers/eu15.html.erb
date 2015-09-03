@@ -40,6 +40,7 @@
                         <div class="speaker-name"><%= raw speaker.first_name %> <%= raw speaker.middle_name %> <%= raw speaker.last_name %><%= raw speaker.suffix %></div>
                         <div class="speaker-title"><%= raw speaker.title %></div>
                         <div class="speaker-company"><%= raw speaker.company_name %></div>
+
                       </div>
                     </div>
                   </div>
@@ -52,6 +53,9 @@
                       <div class="speaker-name"><%= raw speaker.first_name %> <%= raw speaker.middle_name %> <%= raw speaker.last_name %><%= raw speaker.suffix %></div>
                       <div class="speaker-title"><%= raw speaker.title %></div>
                       <div class="speaker-company"><%= raw speaker.company_name %></div>
+                        <% if speaker.twitter? %>
+                        <div class="speaker-twitter">@<%= raw speaker.twitter %></div>
+                        <% end %>
                     </div>
                     <div class="speaker-bio-text"><div class="speaker-bio-text-inner"><%= raw speaker.bio %></div></div>
                     <div class="speaker-bio-mask"></div>
@@ -67,6 +71,9 @@
                         <div class="speaker-name"><%= raw speaker.first_name %> <%= raw speaker.last_name %><%= raw speaker.suffix %></div>
                         <div class="speaker-title"><%= raw speaker.title %></div>
                         <div class="speaker-company"><%= raw speaker.company_name %></div>
+                        <% if speaker.twitter? %>
+                        <div class="speaker-twitter">@<%= raw speaker.twitter %></div>
+                        <% end %>
                       </div>
                     </div>
                   </div>
@@ -96,6 +103,9 @@
                         <div class="speaker-name"><%= raw speaker.first_name %> <%= raw speaker.middle_name %> <%= raw speaker.last_name %><%= raw speaker.suffix %></div>
                         <div class="speaker-title"><%= raw speaker.title %></div>
                         <div class="speaker-company"><%= raw speaker.company_name %></div>
+                        <% if speaker.twitter? %>
+                        <div class="twitter">@<%= raw speaker.twitter %></div>
+                        <% end %>
                       </div>
                     </div>
                   </div>
@@ -108,6 +118,9 @@
                       <div class="speaker-name"><%= raw speaker.first_name %> <%= raw speaker.middle_name %> <%= raw speaker.last_name %><%= raw speaker.suffix %></div>
                       <div class="speaker-title"><%= raw speaker.title %></div>
                       <div class="speaker-company"><%= raw speaker.company_name %></div>
+                        <% if speaker.twitter? %>
+                        <div class="twitter">@<%= raw speaker.twitter %></div>
+                        <% end %>
                     </div>
                     <div class="speaker-bio-text"><div class="speaker-bio-text-inner"><%= raw speaker.bio %></div></div>
                     <div class="speaker-bio-mask"></div>
@@ -124,6 +137,9 @@
                           <%= raw speaker.last_name %><%= raw speaker.suffix %></div>
                         <div class="speaker-title"><%= raw speaker.title %></div>
                         <div class="speaker-company"><%= raw speaker.company_name %></div>
+                        <% if speaker.twitter? %>
+                        <div class="twitter">@<%= raw speaker.twitter %></div>
+                        <% end %>
                       </div>
                     </div>
                   </div>
