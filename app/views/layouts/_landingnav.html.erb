@@ -1,24 +1,102 @@
-<div class="navbar-area">
-  <nav class="navbar navbar-default" role="navigation">
-    <div class="container-fluid">
-      <div class="logo-area">
-        <a href="/" class="nav-logo"></a>
-      </div>
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
-          <ul id="menu-main-menu" class="nav navbar-nav">
-            <li class="menu-item"><a href="/europe">Europe</a></li>
-            <li class="menu-item"><a href="/usa">USA</a></li>
-            <li class="menu-item"><a href="/china">China</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </nav>
+<div class="redesign-nav mobile-menu-is-hidden">
+	<div class="header">
+		<div class="anav">
+			<div class="anav-left">
+			</div>
+			<div class="anav-middle">
+				<a href="" class="anav-logo">
+					<img src="https://s3-us-west-2.amazonaws.com/lendit/temporary-for-redesign/redesign-lendit-logo.png" />
+				</a>
+			</div>
+			<div class="anav-right">
+				<ul>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">About</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="bnav">
+			<ul class="bnav1 logo-is-hidden">
+				<!--
+
+				===
+				NOTES for bnav-logo
+
+				"bnav-logo" (see below) is going to be hidden until the user scrolls;
+				Once the user scrolls, and the nav is "sticky" then "bnav-logo" appears
+				by having the "logo-is-visible" class (in the UL above).
+
+				A LITTLE MORE INFO:
+				This "sticky menu" is just something I'm telling you about here (I
+				don't need a dynamic treatment for this yet); I'll show you the
+				technique soon about how we could do it; and beyond using this
+				framework I found on the web, this is mostly a CSS issue)
+
+				===
+				NOTES for mobile menu triggers vs. regular tab links:
+
+				You'll see that Europe, USA, etc. each contain a link _and_ a span. I
+				have a mediaquery statement saying that the spans appear for mobile
+				while the A hrefs display for desktop. And what's important here is
+				that the functionality is different between the two types:
+				The links are just normal links which take the user to the
+				corresponding page; if someone clicks "Europe" they go to the Europe
+				homepage, etc.
+
+				The spans are triggers for the mobile menu; so the mobile menu just
+				appears; this is done by toggling a class in the BODY or overall
+				container. For instance, look all the way up at the top of this source
+				document to the "redesign-nav" object. You'll see that it also has the
+				class of "mobile-menu-is-hidden". Try changing it to
+				"mobile-menu-is-visible" and you'll see the kind of toggle that i'm
+				going for.
+
+				-->
+				<li class="bnav-logo"><a href=""> <img src="https://s3-us-west-2.amazonaws.com/lendit/temporary-for-redesign/redesign-lendit-logo.png" class="logo" /> </a></li>
+				<li class="is-active"><a href="">USA </a><span class="nav-usa">USA</span></li>
+				<li><a href="">Europe </a><span class="nav-europe">Europe</span></li>
+				<li><a href="">China </a><span class="nav-china">China</span></li>
+			</ul>
+			<!--
+
+			===
+			NOTES for 'year selector':
+
+			Below, you can see "toggles-year-menu-on", and "-off" below.  By default
+			the year menu is hidden If the user clicks on the current year, 2016 in
+			this case, then the "Select Year" menu appears and the Current year
+			object is hidden.  So- at this point, while the menu is opened, the user
+			can either click the year, in which case, they will be sent to an
+			entirely new page, probably the 'homepage' / highlights page relating to
+			the year they clicked. OR, they can also click "Select Year" to exit
+			this menu.
+			-->
+			<div class="bnav2 years-are-hidden">
+				<ul class="bnav-years ">
+					<ul class="current-year">
+						<li><span class="toggles-year-menu-on">2016 </span></li>
+					</ul>
+					<ul class="year-menu">
+						<li><span class="toggles-year-menu-off">Select Year </span></li>
+						<li><a href="">2016 </a></li>
+						<li><a href="">2015 </a></li>
+						<li><a href="">2014 </a></li>
+						<li><a href="">2013 </a></li>
+						<li><a href="">2012 </a></li>
+					</ul>
+				</ul>
+				<ul class="bnav-sub">
+					<li class="is-active"><a href="">Highlights</a></li>
+					<li><a href="">Agenda</a></li>
+					<li><a href="">Speakers</a></li>
+					<li><a href="">Sponsors</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="mobile-menu">
+		<div class="exit-mobile-menu">
+			<span class="closes-mobile-menu"></span>
+		</div>
+	</div>
 </div>
