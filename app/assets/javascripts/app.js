@@ -8,11 +8,6 @@ $(document).ready(function() {
 ////////// TOGGLE NAV FOR MOBILE //////////
 ///////////////////////////////////////////
 
-// if (screen.width <= 600) {
-//   $('.redesign-nav').removeClass('mobile-menu-is-hidden').addClass('mobile-menu-is-visible')
-// } else {
-//   $('.redesign-nav').removeClass('mobile-menu-is-visible').addClass('mobile-menu-is-hidden')
-// }
 
 $('.toggles-year-menu-on').on("click", function() {$('.bnav2').removeClass('years-are-hidden').addClass('years-are-visible')});
 $('.toggles-year-menu-off').on("click", function() {$('.bnav2').removeClass('years-are-visible').addClass('years-are-hidden')});
