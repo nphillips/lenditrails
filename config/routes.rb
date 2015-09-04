@@ -32,10 +32,11 @@ LenditRails::Application.routes.draw do
   get '/networking' => 'welcome#networking'
 
   get '/jobs' => 'jobs#index'
+  get '/jobs/controller' => 'jobs#controller'
   get '/jobs/salesforce-developer' => 'jobs#salesforce_developer'
   get '/jobs/vp-finance', to: redirect('/jobs', status: 301)
-  get '/jobs/speaker-manager' => 'jobs#speaker_manager'
-  get '/jobs/content-manager', to: redirect('/jobs/speaker-manager', status: 301)
+  get '/jobs/speaker-manager', to: redirect('/jobs', status: 301)
+  get '/jobs/content-manager', to: redirect('/jobs', status: 301)
 
   get '/europe2015-prospectus', to: redirect('https://s3-us-west-2.amazonaws.com/lendit/europe-2015/prospectus.pdf', status: 301)
   get '/europe2015-brochure', to: redirect('https://s3-us-west-2.amazonaws.com/lendit/europe-2015/conference-brochure.pdf', status: 301)
