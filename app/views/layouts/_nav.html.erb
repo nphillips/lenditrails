@@ -15,7 +15,8 @@
 					<ul id="menu-main-menu" class="nav navbar-nav">
 						<li class="menu-item"><a href="/">Home</a></li>
 						<!-- <li><a href="/usa/2015/agenda">Agenda</a></li> -->
-						<li><a href="/sponsors">Sponsors</a></li>
+						<li><%= link_to 'Sponsors', sponsors_path %></li>
+						<!-- <li><a href="/sponsors">Sponsors</a></li> -->
 						<li><a href="/speakers">Speakers</a></li>
 						<!-- <li><a href="/videos">Videos</a></li> -->
 						<!-- <li><a href="http://blog.lendit.co/">Blog</a></li> -->
@@ -25,9 +26,9 @@
 								<span class="caret"></span>
 							</a>
 							<ul role="menu" class="dropdown-menu">
-								<li class="menu-item"><a href="/china">LendIt China</a></li>
-								<li class="menu-item"><a href="/europe">LendIt Europe</a></li>
-								<li class="menu-item"><a href="/usa">LendIt USA</a></li>
+								<%= active_link_to 'LendIt China', china_path, wrap_tag: :li, wrap_class: "menu-item" %>
+								<%= active_link_to 'LendIt Europe', europe_path, wrap_tag: :li, wrap_class: "menu-item" %>
+								<%= active_link_to 'LendIt USA', usa_path, wrap_tag: :li, wrap_class: "menu-item" %>
 							</ul>
 						</li>
 						<li class="menu-item menu-item-has-children dropdown">
@@ -36,8 +37,8 @@
 							</a>
 							<ul role="menu" class="dropdown-menu">
 								<li class="menu-item"><a href="http://blog.lendit.co">Blog</a></li>
-								<li class="menu-item"><a href="/videos">Videos</a></li>
-								<li class="menu-item"><a href="/podcasts">Podcasts</a></li>
+								<%= active_link_to 'Videos', videos_path, wrap_tag: :li, wrap_class: "menu-item"%>
+								<%= active_link_to 'Podcasts', podcasts_path, wrap_tag: :li, wrap_class: "menu-item" %>
 							</ul>
 						</li>
 						<li><a href="/about">About</a></li>
