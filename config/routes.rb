@@ -12,7 +12,7 @@ LenditRails::Application.routes.draw do
   get '/sponsors' => 'sponsors#index'
   # get '/speakers/sign-up' => 'speakers#sign-up'
   get '/speakers/thank-you' => 'speakers#thank-you'
-  get '/terms-of-use' => 'welcome#terms-of-use'
+  get '/terms-of-use' => 'welcome#terms-of-use', as: :terms_of_use
   get '/videos' => 'videos#index'
   get '/press' => 'welcome#press'
   # get '/photos', to: redirect("https://www.flickr.com/photos/wemakepictures/sets/72157647005531163/")

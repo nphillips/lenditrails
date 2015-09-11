@@ -16,6 +16,7 @@ gem 'canonical-rails', github: 'jumph4x/canonical-rails'
 gem "flickr-objects"
 gem 'friendly_id', '~> 5.1.0'
 gem 'pry-rails'
+gem 'active_link_to'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -27,4 +28,4 @@ group :production do
 end
 
 
-ruby '1.9.3'
+ruby '2.1.2'
