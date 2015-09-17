@@ -9,6 +9,7 @@ class SpeakersController < ApplicationController
   def eu15
     @eu15_speakers = Speaker.where(conference: 'LendIt Europe 2015')
     @speakers = @eu15_speakers.where(featured: false)
+    @eu15_speakers.sort_by! { |speaker| [ speaker['last_name'], speaker['first_name'] ] }
     @featured = @eu15_speakers.where(featured: true)
   end
 
