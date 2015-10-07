@@ -13,6 +13,11 @@ class SpeakersController < ApplicationController
     @featured = @eu15_speakers.where(featured: true)
   end
 
+  def eu15speakers
+    @eu15_speakers = Speaker.where(conference: 'LendIt Europe 2015')
+    @eu15_speakers = @eu15_speakers.order(:last_name)
+  end
+
   def usa15
     @usa15_speakers = Speaker.where(conference: 'LendIt USA 2015')
     @vip = @usa15_speakers.where(keynote_vip: true)
