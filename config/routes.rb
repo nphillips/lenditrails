@@ -1,8 +1,8 @@
 LenditRails::Application.routes.draw do
 
 
-  root 'welcome#home'
-  # root 'conferences#china15'
+  # root 'welcome#home'
+  root 'conferences#eu15'
 
   # get '/home' => 'home#landing'
   get '/register' => 'welcome#regdown'
